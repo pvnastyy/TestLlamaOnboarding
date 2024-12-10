@@ -11,7 +11,8 @@ app = Flask(__name__)
 CORS(app)
 
 #Load LLaMA model
-MODEL_PATH = "/path/to/your/llama/model"  # Replace with your path, this is mine
+#"C:\Users\Admin\Downloads\llama-2-7b-chat.Q5_K_M.gguf"
+MODEL_PATH = "/mnt/c/Users/Admin/Downloads/llama-2-7b-chat.Q5_K_M.gguf"  # Replace with your path, this is mine
 print("Loading LLaMA model...")
 device = "cuda" if torch.cuda.is_available() else "cpu"
 tokenizer = AutoTokenizer.from_pretrained(MODEL_PATH)
